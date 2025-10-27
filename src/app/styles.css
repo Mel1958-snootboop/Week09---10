@@ -55,7 +55,7 @@ dialog {
   }
 
   &::backdrop {
-    background-color: #f6f7f9;
+    background-color: #5dfee0;
     opacity: 0.8;
   }
 }
@@ -194,18 +194,18 @@ header {
 }
 
 .main__home {
-  background-color: rgb(178 193 212);
+  background-color: rgb(222, 92, 212);
   min-height: 100vh;
 }
 
 .main__restaurant {
-  background-color: rgb(229 234 240);
+  background-color: rgb(57, 220, 235);
   min-height: 90vh;
 }
 
 article {
   margin: 0 auto;
-  background-color: rgb(229 234 240);
+  background-color: rgb(254, 197, 76);
   padding: 20px 40px;
 }
 
