@@ -97,7 +97,7 @@ footer {
 }
 
 header {
-  background-color: rgb(56 85 116);
+  background-color: rgb(28, 79, 134);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -205,7 +205,7 @@ header {
 
 article {
   margin: 0 auto;
-  background-color: rgb(254, 197, 76);
+  background-color: rgb(15, 238, 171);
   padding: 20px 40px;
 }
 
