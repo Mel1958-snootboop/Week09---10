@@ -2,7 +2,8 @@
   "projects": {
     "request.auth": "friendlyeats-codelab-2c405",
     "friendlyeats-codelab": "friendlyeats-codelab-2c405",
-    "week09---10": "week09---10"
+    "week09---10": "week09---10",
+    "week09-10": "week09---10"
   },
   "targets": {},
   "etags": {}
