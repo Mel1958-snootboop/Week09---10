@@ -7,28 +7,28 @@ import { randomData } from "@/src/lib/randomData.js";
 
 import { Timestamp } from "firebase/firestore";
 
-export async function generateFakeRestaurantsAndReviews() {
-  const restaurantsToAdd = 5;
+export async function generateNeonShopsAndReviews() {
+  const neonshopsToAdd = 5;
   const data = [];
 
-  for (let i = 0; i < restaurantsToAdd; i++) {
-    const restaurantTimestamp = Timestamp.fromDate(getRandomDateBefore());
+  for (let i = 0; i < generateNeonShopsToAdd; i++) {
+    const NeonShopsTimestamp = Timestamp.fromDate(getRandomDateBefore());
 
     const ratingsData = [];
 
     // Generate a random number of ratings/reviews for this restaurant
     for (let j = 0; j < randomNumberBetween(0, 5); j++) {
       const ratingTimestamp = Timestamp.fromDate(
-        getRandomDateAfter(restaurantTimestamp.toDate())
+        getRandomDateAfter(NeonShopsTimestamp.toDate())
       );
 
       const ratingData = {
         rating:
-          randomData.restaurantReviews[
-            randomNumberBetween(0, randomData.restaurantReviews.length - 1)
+          randomData.NeonShopsReviews[
+            randomNumberBetween(0, randomData.NeonShopsReviews.length - 1)
           ].rating,
-        text: randomData.restaurantReviews[
-          randomNumberBetween(0, randomData.restaurantReviews.length - 1)
+        text: randomData.NeonShopsReviews[
+          randomNumberBetween(0, randomData.NeonShopsReviews.length - 1)
         ].text,
         userId: `User #${randomNumberBetween()}`,
         timestamp: ratingTimestamp,
@@ -46,15 +46,15 @@ export async function generateFakeRestaurantsAndReviews() {
 
     const restaurantData = {
       category:
-        randomData.restaurantCategories[
-          randomNumberBetween(0, randomData.restaurantCategories.length - 1)
+        randomData.NeonShopsCategories[
+          randomNumberBetween(0, randomData.NeonShopsCategories.length - 1)
         ],
-      name: randomData.restaurantNames[
-        randomNumberBetween(0, randomData.restaurantNames.length - 1)
+      name: randomData.NeonShopsNames[
+        randomNumberBetween(0, randomData.NeonShopsNames.length - 1)
       ],
       avgRating,
-      city: randomData.restaurantCities[
-        randomNumberBetween(0, randomData.restaurantCities.length - 1)
+      city: randomData.NeonShopsCities[
+        randomNumberBetween(0, randomData.NeonShopsCities.length - 1)
       ],
       numRatings: ratingsData.length,
       sumRating: ratingsData.reduce(
@@ -66,7 +66,7 @@ export async function generateFakeRestaurantsAndReviews() {
         1,
         22
       )}.png`,
-      timestamp: restaurantTimestamp,
+      timestamp: NeonShopsTimestamp,
     };
 
     data.push({
