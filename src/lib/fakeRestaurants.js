@@ -62,7 +62,7 @@ export async function generateNeonShopsAndReviews() {
         0
       ),
       price: randomNumberBetween(1, 4),
-      photo: `https://storage.googleapis.com/firestorequickstarts.appspot.com/food_${randomNumberBetween(
+      photo: `https://drive.google.com/drive/folders/1DzJ-EbKUxjGw_7si2luMv1stE4PCYSwk?usp=drive_link${randomNumberBetween(
         1,
         22
       )}.png`,
