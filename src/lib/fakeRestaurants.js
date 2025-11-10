@@ -44,7 +44,7 @@ export async function generateNeonShopsAndReviews() {
         ) / ratingsData.length
       : 0;
 
-    const restaurantData = {
+    const neonshopsData = {
       category:
         randomData.NeonShopsCategories[
           randomNumberBetween(0, randomData.NeonShopsCategories.length - 1)
@@ -70,7 +70,7 @@ export async function generateNeonShopsAndReviews() {
     };
 
     data.push({
-      restaurantData,
+      neonshopsData,
       ratingsData,
     });
   }
