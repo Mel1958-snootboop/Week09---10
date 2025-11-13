@@ -1,6 +1,6 @@
 // src/lib/firebase/firestore.js
 // Firestore database helpers
-import { generateFakeRestaurantsAndReviews } from "@/src/lib/fakeRestaurants.js";
+import { generateNeonShopsAndReviews } from "@/src/lib/fakeRestaurants.js";
 
 // Firestore SDK functions and database instance
 import {
@@ -216,13 +216,13 @@ export function getReviewsSnapshotByRestaurantId(restaurantId, cb) {
 }
 
 // Utility function to add a set of fake restaurants and reviews to Firestore
-export async function addFakeRestaurantsAndReviews() {
-  const data = await generateFakeRestaurantsAndReviews();
-  for (const { restaurantData, ratingsData } of data) {
+export async function addNeonShopsAndReviews() {
+  const data = await generateNeonShopsAndReviews();
+  for (const { neonshopsData, ratingsData } of data) {
     try {
       const docRef = await addDoc(
         collection(db, "restaurants"),
-        restaurantData
+        neonshopsData
       );
 
       for (const ratingData of ratingsData) {

@@ -8,12 +8,11 @@ import { randomData } from "@/src/lib/randomData.js";
 import { Timestamp } from "firebase/firestore";
 
 export async function generateNeonShopsAndReviews() {
-  const neonshopsToAdd = 5;
+  const neonShopsToAdd = 5;
   const data = [];
 
-  for (let i = 0; i < generateNeonShopsToAdd; i++) {
+  for (let i = 0; i < neonShopsToAdd; i++) {
     const NeonShopsTimestamp = Timestamp.fromDate(getRandomDateBefore());
-
     const ratingsData = [];
 
     // Generate a random number of ratings/reviews for this restaurant
@@ -62,7 +61,7 @@ export async function generateNeonShopsAndReviews() {
         0
       ),
       price: randomNumberBetween(1, 4),
-      photo: `https://drive.google.com/drive/folders/1DzJ-EbKUxjGw_7si2luMv1stE4PCYSwk?usp=drive_link${randomNumberBetween(
+      photo: `/neon-images/${randomNumberBetween(
         1,
         22
       )}.png`,

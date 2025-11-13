@@ -58,7 +58,7 @@ export default function Header({ initialUser }) {
     <header>
       <Link href="/" className="logo">
         <img src="/friendly-eats.svg" alt="FriendlyEats" />
-        Friendly Eats
+        Friendly Neons
       </Link>
       {user ? (
         <>
